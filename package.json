@@ -1,0 +1,21 @@
+{
+  "name": "cubby",
+  "version": "0.0.0",
+  "description": "simple storage",
+  "main": "index.js",
+  "directories": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/icodeforlove/node-cubby.git"
+  },
+  "keywords": [
+    "storage",
+    "node",
+    "json"
+  ],
+  "author": "Chad Scira",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {}
+}
