@@ -1,6 +1,8 @@
 ## cubby
 
-a super simple sync way to store javascript information not geared towards performance
+super simple synchronous json storage
+
+this was originally created to provide a way to store data for a few command-line tools, and is not geared towards performance
 
 ## installation
 
