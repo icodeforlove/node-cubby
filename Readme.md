@@ -17,6 +17,21 @@ cubby.set('foo', 'bar');
 console.log(cubby.get('foo'));
 ```
 
+or
+
+```javascript
+cubby.set({
+	one: 'one',
+	two: 'two',
+	three: {
+		nested: true
+	}
+});
+
+console.log(cubby.get('one')); // returns one
+console.log(cubby.getPath('three.nested')); // returns true
+```
+
 ## multiple files
 
 by default creating a cubby will result in a cubby.json file, but you can change this by providing a file path
