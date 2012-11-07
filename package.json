@@ -1,6 +1,6 @@
 {
   "name": "cubby",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "simple storage",
   "main": "index.js",
   "directories": {
@@ -17,5 +17,8 @@
   "author": "Chad Scira",
   "license": "MIT",
   "devDependencies": {},
-  "dependencies": {}
+  "dependencies": {
+    "clone": "0.1.1",
+    "underscore": "1.4.2"
+  }
 }
