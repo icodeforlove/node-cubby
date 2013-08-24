@@ -1,6 +1,6 @@
 ## cubby
 
-super simple synchronous json storage
+super simple synchronous json storage (there is also a [mysql version](https://github.com/icodeforlove/node-mysql-cubby))
 
 this was originally created to provide a way to store data for a few command-line tools, and is not geared towards performance
 
