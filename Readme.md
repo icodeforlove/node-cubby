@@ -1,52 +1,26 @@
 ## cubby
 
-super simple synchronous json storage (there is also a [mysql version](https://github.com/icodeforlove/node-mysql-cubby))
-
-this was originally created to provide a way to store data for a few command-line tools, and is not geared towards performance
+super simple synchronous json storage.
 
 ## installation
 
     $ npm install cubby
 
+## interface
+
+**cubby(FILENAME, INITIAL_VALUE, BATCH)**
+
+- FILENAME - the name of the file it will create inside of the .cubby folder
+- INITIAL_VALUE - the initial value of the object
+- BATCH - default is false, but if you are ok with a 30-50 ms delay between the snapshot of the cubby then this would greatly improve filesystem performance if you are making hundreds of updates at the same time
+
 ## usage
 
 ```javascript
-var Cubby = require('cubby'),
-	cubby = new Cubby();
+import cubby from 'cubby';
 
-cubby.set('foo', 'bar');
+let users = cubby('users', []);
+users.push('test'); // this data is automatically synced with the filesystem
 
-console.log(cubby.get('foo'));
-```
-
-or
-
-```javascript
-cubby.set({
-	one: 'one',
-	two: 'two',
-	three: {
-		nested: true
-	}
-});
-
-console.log(cubby.get('one')); // returns one
-console.log(cubby.getPath('three.nested')); // returns true
-```
-
-## multiple files
-
-by default creating a cubby will result in a cubby.json file, but you can change this by providing a file path
-
-```javascript
-var cubbyOne = new Cubby({file: 'something-one.json'}),
-	cubbyTwo = new Cubby({file: 'something-two.json'});
-```
-
-## paths
-
-```javascript
-cubby.setPath('one.two.three', true);
-cubby.getPath('one.two.three');
-cubby.getPath('one.two.three.four'); // returns undefined when value doesn't exist
+console.log(users);
 ```

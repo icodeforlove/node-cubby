@@ -1,10 +1,9 @@
 {
   "name": "cubby",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "simple storage",
   "main": "index.js",
-  "directories": {
-  },
+  "directories": {},
   "repository": {
     "type": "git",
     "url": "git://github.com/icodeforlove/node-cubby.git"
@@ -18,6 +17,7 @@
   "license": "MIT",
   "devDependencies": {},
   "dependencies": {
-    "underscore": "1.4.2"
+    "app-root-path": "2.2.1",
+    "observable-slim": "0.1.5"
   }
 }
